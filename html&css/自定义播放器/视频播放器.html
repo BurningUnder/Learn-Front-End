@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="./css/css.css">
+</head>
+<body>
+     <video src=""></video>
+     <div class="controls">
+         <a href="javascript:;" class="switch fa fa-play"></a>
+         <a href="javascript:;" class="expand fa fa-expand"></a>
+         <div class="progress">
+             <!-- bar 用来响应事件 -->
+             <div class="bar"></div>
+             <div class="loaded"></div>
+             <div class="elapse"></div>
+         </div>
+         <div class="time">
+             <span class="currentTime">00:00:00</span>
+             \
+             <span class="totalTime">00:00:00</span>
+         </div>
+     </div>
+     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+     <script>
+         $(function(){
+            //  1.获取播放器
+            var video = $("video")[0];
+            // 实现播放暂停
+            $(".switch").click(function(){
+                // 如果是暂停-》播放 ，如果播放 -》暂停
+                if(video.paused){
+                    video.play();
+                    // 移除暂停标识，添加播放样式
+                }
+                else{
+                    video.pause();
+                    // 移除播放标识，添加播放暂停样式
+                }
+                // 设置标签样式
+                $(this).toggleClass("fa-play fa-pause");
+            });
+            // 实现全屏
+            $(".expand").click(function(){
+                if(video.requestFullscreen){
+                    video.requestFullscreen();
+                }
+                else if (video.webkitRequestFullScreen) {
+                    video.webkitRequestFullScreen();
+                }
+                else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen()
+                }
+                else if (video.msRequestFullScreen) {
+                    video.msRequestFullScreen()
+                }
+
+            })
+         });
+     </script>
+</body>
+</html>
