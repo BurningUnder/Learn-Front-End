@@ -1,0 +1,66 @@
+<html>
+
+<body>
+
+    <form action="action_page.php">
+        <fieldset>
+            <legend>formaction 属性
+            </legend>
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit"><br>
+            <input type="submit" formaction="demo_admin.asp" value="Submit as admin">
+            <br>
+            <formaction>formaction 属性规定当提交表单时处理该输入控件的文件的 URL。formaction 属性覆盖 form 元素的 action 属性。
+            </formaction>
+        </fieldset>
+    </form>
+    <form action="demo_post_enctype.asp" method="post">
+        <fieldset>
+            <legend>formenctype 属性</legend>
+            First name: <input type="text" name="fname"><br>
+            <input type="submit" value="Submit">
+            <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+            <p>formenctype 属性规定当把表单数据（form-data）提交至服务器时如何对其进行编码（仅针对 method="post" 的表单）。
+                formenctype 属性覆盖 form 元素的 enctype 属性。</p>
+        </fieldset>
+    </form>
+    <form action="action_page.php" method="get">
+        <fieldset>
+            <legend>
+                formmethod 属性
+            </legend>
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit">
+            <input type="submit" formmethod="post" formaction="demo_post.asp" value="Submit using POST">
+            <p>formaction 属性规定当提交表单时处理该输入控件的文件的 URL。
+                formaction 属性覆盖 form 元素的 action 属性。</p>
+        </fieldset>
+    </form>
+    <form action="action_page.php">
+        <fieldset>
+            <legend>formnovalidate 属性
+            </legend>
+            E-mail: <input type="email" name="userid"><br>
+            <input type="submit" value="Submit"><br>
+            <input type="submit" formnovalidate value="Submit without validation">
+            <p>如果设置，则规定在提交表单时不对 <input> 元素进行验证。
+                formnovalidate 属性覆盖 form 元素的 novalidate 属性。
+                formnovalidate 属性可用于 type="submit"。</p>
+        </fieldset>
+    </form>
+    <form action="action_page.php">
+        <fieldset>
+            <legend>formtarget 属性</legend>
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit as normal">
+            <input type="submit" formtarget="_blank" value="Submit to a new window">
+            <p>formtarget 属性规定的名称或关键词指示提交表单后在何处显示接收到的响应。
+                formtarget 属性会覆盖 form 元素的 target 属性。</p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

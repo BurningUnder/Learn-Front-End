@@ -1,0 +1,68 @@
+<html>
+
+<body>
+    <form action="" id="form1">
+        value 属性规定输入字段的初始值：
+        <input type="text" name="text" id="text" value="xx">
+        <br>
+        disable:
+        <input type="text" name="text" id="text" value="xx" disabled>
+        被禁用的元素不会被提交。
+        <br>
+        readonly:
+        <input type="text" name="text" id="text" value="xx" readonly>
+        <br>
+        size:
+        <input type="text" name="text" id="text" value="xx" size="40">
+        <br>
+        输入字段的尺寸（框的长度）（以字符计）
+        <br>
+        maxlength :
+        <input type="text" name="text" id="text" value="xx" maxlength="3">
+        规定输入字段允许的最大长度
+        <br>
+        autocomplete :
+        <input type="text" name="text" id="text" value="xx" autocomplete="on">
+        基于用户之前的输入值自动填写值
+        <br>
+        autofocus :
+        <input type="text" name="text" id="text" value="xx" autofocus>
+        自动获取焦点
+        <br>
+        autofocus :
+        <input type="text" name="text" id="text" value="xx" autofocus>
+        自动获取焦点
+        <br>
+        form:
+        <input type="text" name="text" form="form1"
+        placeholder="这个输入框在表单之外但仍能提交">
+        输入字段位于 HTML 表单之外（但仍属表单）：
+        <br>
+        height&width:
+        <input type="image" src="./i/7fb813b4ly4fpb3z0aqp7j20go0c079t.jpg" width="48" height="48" alt="submit">
+        <br>
+        默认地，image 输入类型会发生点击图像按钮时的 X 和 Y 坐标
+        <br>
+        datalist:
+        <input list="browsers">
+
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <br>
+        min&max：
+        <input type="number" name="quantity" min="1" max="5">
+        <br>
+        multiple:
+        <input type="file" name="img" multiple>
+        <br>
+        pattern:
+        <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+    </form>
+</body>
+
+</html>
