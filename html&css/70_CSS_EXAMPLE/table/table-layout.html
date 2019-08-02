@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style>
+        table.one {
+            table-layout: auto
+        }
+
+        table.two {
+            table-layout: fixed
+        }
+
+        /* 
+        使用auto时即使设置了宽度也会根据实际情况调整
+        使用fixed就会按照设置的固定 
+        默认情况是均分
+        */
+    </style>
+</head>
+
+<body>
+    <table class="one" border="1" width="100%">
+        <tr>
+            <td width="20%">1000000000000000000000000000</td>
+            <td width="40%">10000000</td>
+            <td width="40%">100</td>
+        </tr>
+    </table>
+
+    <table class="two" border="1" width="100%">
+        <tr>
+            <td width="20%">1000000000000000000000000000</td>
+            <td width="40%">10000000</td>
+            <td width="40%">100</td>
+        </tr>
+    </table>
+    <table class="two" border="1" width="100%">
+        <tr>
+            <td>1000000000000000000000000000</td>
+            <td>10000000</td>
+            <td>100</td>
+        </tr>
+    </table>
+</body>
+
+</html>
