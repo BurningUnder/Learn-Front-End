@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>行内框的宽度</title>
+        <style>
+            p {
+                font-size: 20px;
+                line-height: 1.5;
+                background-color: orange;
+                width: 500px;
+                margin: 50px auto;
+                padding: 20px;
+            }
+
+            span {
+                background-color: red;
+            }
+
+            .p1 span {
+                margin: 30px;
+            }
+
+            .p2 span {
+                margin: 30px;
+                border: 30px solid green;
+            }
+
+            .p3 span {
+                margin: 30px;
+                border: 30px solid green;
+                padding: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p class="p1"><span>这是</span>第一个段落，红色区域增加了一个margin属性，值为30px；可以明显看到，只有水平方向上的外边距增加了行内框的宽度，而垂直方向上的外边距没有增加行内框的高度。</p>
+            <p class="p2"><span>这是</span>第二个段落，增加了一个30px宽的边框；可以明显看到，只有水平方向上的边框增加了行内框的宽度，而垂直方向上的边框没有增加行内框的高度。</p>
+            <p class="p3"><span>这是</span>第三个段落，增加了一个padding属性，值为30px；可以明显看到，只有水平方向上的内边距增加了行内框的宽度，而垂直方向上的内边距没有增加行内框的高度。</p>
+        </div>
+    </body>
+</html>

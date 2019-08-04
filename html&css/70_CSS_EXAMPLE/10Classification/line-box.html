@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>行内框的高度</title>
+        <style>
+            p {
+                font-size: 32px;
+                background-color: orange;
+                width: 500px;
+                margin: 20px auto 50px auto;
+            }
+
+            .p1 {
+                line-height: normal;
+            }
+
+            .p2 {
+                line-height: 20px;
+            }
+
+            .p3 {
+                line-height: 0;
+            }
+
+            ul {
+                font-size: 16px;
+                line-height: 1.5;
+                background-color: cyan;
+                width: 500px;
+                margin: 50px auto;
+            }
+
+            ul>li {
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p class="p1">这是第一个段落，行高为normal。</p>
+            <p class="p2">这是第二个段落，行高为20px。</p>
+            <p class="p3">这是第三个段落，行高为0。</p>
+        </div>
+        <div>
+            <ul>
+                <li>背景颜色为什么会有这些变化？</li>
+                <li>font-size为32px，内容区的高度也就是32px；而line-height为20px，那么半行距就是-6px；
+                将-6px的半行距分别加到内容区的上下部分，从而行内框的高度就变成了20px；行框的高度也相应为20px。</li>
+                <li>当line-height为0，那么半行距就是-16px；
+                将-16px的半行距分别加到内容区的上下部分，从而行内框的高度变成0；行框的高度也相应为0。</li>
+                <li>于是，我们惊奇地发现，在文本行中，line-height决定了行内框的高度，以此为基准确定了行框的高度；因此，行内（文本）元素的高度是由line-height决定的，并不是由元素中的文本撑开的。</li>
+            </ul>
+        </div>
+    </body>
+</html>
