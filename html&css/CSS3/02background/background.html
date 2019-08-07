@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <style>
+        p.image {
+            background-image: url("./i/7fb813b4ly4fpb3z0aqp7j20go0c079t.jpg");
+            /* 以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。 */
+            background-size: 400px 400px;
+            background-repeat: no-repeat;
+        }
+
+        div {
+            border: 1px solid black;
+            padding: 35px;
+            background-image: url('./i/7fb813b4ly4fpb3z0aqp7j20go0c079t.jpg');
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+        #div1{
+            background-origin: border-box;
+        }
+        #div2{
+            background-origin: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="image">test background image</p>
+    <p>background-origin:border-box:</p>
+    <div id="div1">
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+    </div>
+    <p>background-origin:content-box:</p>
+    <div id="div2">
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+    </div>
+    
+</body>
+
+</html>

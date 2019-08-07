@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <style>
+        /* 
+            Internet Explorer、Opera 以及 Chrome 支持 box-sizing 属性。
+            Firefox 支持替代的 -moz-box-sizing 属性。
+        */
+        div {
+            border: 5px solid;
+            padding: 10px 40px;
+            width: 300px;
+            margin: 5px;
+        }
+
+        /* 
+        宽度和高度分别应用到元素的内容框。
+        在宽度和高度之外绘制元素的内边距和边框。
+         */
+        .cb {
+            float: left;
+            width: 300px;
+            height: 100px;
+            box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+        }
+
+        /* 
+        为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+        通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
+         */
+        .bb {
+            float: left;
+            width: 300px;
+            height: 100px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>this div without change</div>
+    <div class="cb">this div box-sizing is cotent-box
+        <br> 宽度和高度分别应用到元素的内容框。
+        <br> 在宽度和高度之外绘制元素的内边距和边框。
+    </div>
+    <div class="bb">this div box-sizing is border-box
+        <br>为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+        <br>通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
+        
+    </div>
+</body>
+
+</html>

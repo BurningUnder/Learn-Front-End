@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <style>
+        div {
+            border: 5px solid black;
+            margin: 20px;
+            padding: 10px 40px;
+        }
+
+        /* 
+            所有主流浏览器都支持 outline-offset 属性，除了 Internet Explorer。
+        */
+        .of {
+            outline: 2px solid salmon;
+            outline-offset: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        this div without change
+    </div>
+    <div class="of">
+        this div 在边框外15px有一个轮廓线
+    </div>
+</body>
+
+</html>

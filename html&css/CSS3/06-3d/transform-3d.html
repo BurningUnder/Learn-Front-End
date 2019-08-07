@@ -1,0 +1,47 @@
+<html>
+<!-- 
+        Internet Explorer 10 和 Firefox 支持 3D 转换。
+
+        Chrome 和 Safari 需要前缀 -webkit-。
+
+        Opera 仍然不支持 3D 转换（它只支持 2D 转换）
+     -->
+
+<head>
+    <style>
+        div {
+            margin: 20px;
+        }
+
+        .rotatex {
+            background-color: burlywood;
+            
+            transform: rotateX(45deg);
+            -webkit-transform: rotateX(45deg);
+            /* Safari 和 Chrome */
+            -moz-transform: rotateX(45deg);
+            /* Firefox */
+        }
+
+        .rotatey {
+            background-color: blue;
+            
+            transform: rotateY(130deg);
+            -webkit-transform: rotateY(130deg);
+            /* Safari 和 Chrome */
+            -moz-transform: rotateY(130deg);
+            /* Firefox */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotatex">
+        this div will rotatex 45deg
+    </div>
+    <div class="rotatey">
+        this div will rotatey 130deg
+    </div>
+</body>
+
+</html>

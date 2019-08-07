@@ -1,0 +1,66 @@
+<html>
+<!-- 
+        Internet Explorer 10、Firefox、Chrome 以及 Opera 支持 transition 属性。
+
+        Safari 需要前缀 -webkit-。
+
+        注释：Internet Explorer 9 以及更早的版本，不支持 transition 属性。
+
+        注释：Chrome 25 以及更早的版本，需要前缀 -webkit-。
+     -->
+
+<head>
+    <style>
+        /* 
+            要实现这一点，必须规定两项内容：
+            定您希望把效果添加到哪个 CSS 属性上
+            规定效果的时长
+         */
+        div.div1,
+        div.div2 {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background: yellowgreen;
+        }
+
+        .div1 {
+            /* width: 200px;
+            height: 200px;
+            background: yellowgreen; */
+            transition: width 2s;
+            -moz-transition: width 2s;
+            /* Firefox 4 */
+            -webkit-transition: width 2s;
+            /* Safari 和 Chrome */
+            -o-transition: width 2s;
+            /* Opera */
+        }
+
+        div.div1:hover {
+            width: 400px;
+        }
+
+        /* 多项同时转变 */
+        .div2 {
+            transition: width 2s, height 2s, transform 2s;
+            -moz-transition: width 2s, height 2s, -moz-transform 2s;
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+            -o-transition: width 2s, height 2s, -o-transform 2s;
+        }
+
+        .div2:hover{
+            width: 100px;
+            height: 20px;
+            transform: rotateZ(45deg)
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+
+</html>

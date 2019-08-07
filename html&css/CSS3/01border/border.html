@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            p.radius{
+                border: 2px solid;
+                border-radius: 8px;
+            }
+
+            p.shadow{
+                border: 2px solid;
+                /* 
+                box-shadow: h-shadow v-shadow blur spread color inset; 
+                    分别对应水平方向阴影距离、垂直方向、模糊距离、阴影尺寸,
+                    阴影颜色以及将外部阴影改为内部阴影
+                */
+                box-shadow: 5px 5px 5px #750b0b 
+            }
+
+            p.image{
+                border: 8px solid;
+                border-image: url("./i/border.png") 30 30 round;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="radius">border-radius</p>
+        <p class="shadow">border-shadow</p>
+        <p class="image">border-image</p>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* 
+        规定至少以下两项 CSS3 动画属性，即可将动画绑定到选择器：
+        规定动画的名称
+        规定动画的时长
+         */
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: myfirst 5s;
+            -moz-animation: myfirst 5s;
+            /* Firefox */
+            -webkit-animation: myfirst 5s;
+            /* Safari and Chrome */
+            -o-animation: myfirst 5s;
+            /* Opera */
+        }
+
+        @keyframes myfirst {
+            from {
+                background: red;
+            }
+
+            to {
+                background: yellow;
+            }
+        }
+
+        /* Firefox */
+        @-moz-keyframes myfirst {
+            from {
+                background: red;
+            }
+
+            to {
+                background: yellow;
+            }
+        }
+
+        /* Safari and Chrome */
+        @-webkit-keyframes myfirst {
+            from {
+                background: red;
+            }
+
+            to {
+                background: yellow;
+            }
+        }
+
+        /* Opera */
+        @-o-keyframes myfirst {
+            from {
+                background: red;
+            }
+
+            to {
+                background: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+
+    <p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+</body>
+
+</html>
