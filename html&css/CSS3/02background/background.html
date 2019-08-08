@@ -10,17 +10,23 @@
         }
 
         div {
-            border: 1px solid black;
+            border: 20px dotted #cccccc;
             padding: 35px;
             background-image: url('./i/7fb813b4ly4fpb3z0aqp7j20go0c079t.jpg');
             background-repeat: no-repeat;
             background-position: left;
         }
-        #div1{
+
+        #div1 {
             background-origin: border-box;
         }
-        #div2{
+
+        #div2 {
             background-origin: content-box;
+        }
+
+        #div3{
+            background-origin: padding-box;
         }
     </style>
 </head>
@@ -29,6 +35,15 @@
     <p class="image">test background image</p>
     <p>background-origin:border-box:</p>
     <div id="div1">
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+        这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+    </div>
+    <p>background-origin:padding-box:</p>
+    <div id="div3">
         这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
         这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
         这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
@@ -45,7 +60,6 @@
         这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
         这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
     </div>
-    
 </body>
 
 </html>
