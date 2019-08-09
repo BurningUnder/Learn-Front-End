@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cube</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            /* 
+                在父元素中设置transform-style可以使
+                子元素的变换效果保存，即不会再变换结束后
+                返回原来的位置
+             */
+            transform-style: preserve-3d;
+            transform: rotate3d(1,1,0,-60deg);
+            /* 视角，默认在立方体的中心xy平面 */
+            perspective: 0;
+            /* 透视远点 分别是x,y轴*/
+            perspective-origin: 0px 0px;
+        }
+        .box > div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        .front{
+            background-color: rgba(255, 0, 0, 0.85);
+            transform: translateZ(100px);
+            /* transform结束后返回原位 */
+        }
+
+        .back{
+            background-color: rgba(0, 255, 0, 0.85);
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+        .left{
+            background-color: rgba(255, 165, 0, 0.85);
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+        .right{
+            background-color: rgba(255, 255, 0, 0.85);
+            transform: translateX(100px) rotateY(90deg);
+        }
+        .top{
+            background-color: rgba(0, 0, 255, 0.85);
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        .bottom{
+            background-color: rgba(128, 0, 128, 0.85);
+            transform: translateY(100px) rotateX(-90deg);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="front">front</div>
+        <div class="back">back</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="top">top</div>
+        <div class="bottom">bottom</div>
+    </div>
+</body>
+</html>
