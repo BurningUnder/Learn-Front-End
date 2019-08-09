@@ -20,8 +20,17 @@ animation-iteration-count:infinite;
     从0->100->0
     而不是原本0->100,0->100
 */
-
 animation-direction: alternate;
+/* 
+animation-delay
+ */
+
+ /* 
+ backwards: 不保留动画结束时的状态，但能在动画延迟开始前就进入动画初始状态
+ forwards: 保持动画结束时的状态，在有延迟条件下不会立即进入状态
+ both: 即保留结束状态，在延迟条件下也立即进入状态
+  */
+  animation-fill-mode: backwards
 }
 
 @keyframes myfirst
