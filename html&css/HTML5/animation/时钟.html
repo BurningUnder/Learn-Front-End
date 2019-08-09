@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .clock {
+            height: 300px;
+            width: 300px;
+            border: 10px solid #cccccc;
+            /* 在盒模型中加边框默认情况下会往外拓展空间，因此想要产生一个圆形需要设置为160 */
+            /* border-radius: 160px; */
+            /* 使用50%可以参照元素实际的宽高 */
+            border-radius: 50%;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .line {
+            width: 8px;
+            height: 300px;
+            background-color: #ccc;
+            position: absolute;
+            /* 
+                    这里参照父元素再参照元素本身的原因也很简单
+                    因为绝对定位默认是以元素的top，left为标准进行移动
+                    因此定位之后元素实际上是在中轴线的右侧
+                    需要往左移动元素的百分之50
+                 */
+            /* 参照父元素 */
+            left: 50%;
+            top: 0;
+            /* 参照元素本身 */
+            transform: translate(-50%, 0);
+            /* 如果其余线条各自进行transform那么第一次的补充移动的transform就会被覆盖因此 */
+        }
+
+        .line1,
+        .line4 {
+            width: 10px;
+        }
+
+        .line2 {
+            transform: translate(-50%, 0) rotateZ(30deg);
+        }
+
+        .line3 {
+            transform: translate(-50%, 0) rotateZ(60deg);
+        }
+
+        .line4 {
+            transform: translate(-50%, 0) rotateZ(90deg);
+        }
+
+        .line5 {
+            transform: translate(-50%, 0) rotateZ(120deg);
+        }
+
+        .line6 {
+            transform: translate(-50%, 0) rotateZ(150deg);
+        }
+
+        .cover {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hour,
+        .minute,
+        .second {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -100%);
+            transform-origin: center bottom;
+        }
+
+        .hour {
+            width: 6px;
+            height: 80px;
+            background-color: red;
+            animation: clock 43200s linear infinite;
+        }
+
+        .minute {
+            width: 4px;
+            height: 90px;
+            background-color: green;
+            animation: clock 3600s linear infinite;
+        }
+
+        .second {
+            width: 2px;
+            height: 100px;
+            background-color: blue;
+            /* steps与Linear是冲突的，不能既线性又步长 */
+            animation: clock 60s infinite steps(60);
+        }
+
+        .center {
+            height: 20px;
+            width: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes clock {
+            from {
+                transform: translate(-50%, -100%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -100%) rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="clock">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+        <div class="cover"></div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+        <div class="center"></div>
+    </div>
+</body>
+
+</html>
