@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 500px;
+            height: 400px;
+            border: 1px solid salmon;
+            margin: 100px auto;
+        }
+
+        div>ul {
+            list-style: none;
+            width: 100%;
+            display: flex;
+        }
+
+        div>ul>li {
+            /* 宽度不能很好的设置 */
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: pink;
+            border-right: 1px solid seagreen;
+            flex: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>首页</li>
+            <li>商品分类</li>
+            <li>我的订单</li>
+            <li>最新商品</li>
+            <li>联系我们</li>
+            <li>退出登录</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            height: 600px;
+            width: 900px;
+            box-sizing: border-box;
+            border: 1px solid salmon;
+            margin: 0 auto;
+            display: flex;
+            
+            /* 设置子元素在  主轴方向上（默认row） 的排列方式 
+                flex-start:让元素从父容器的起始位置开始排列
+                flex-end：
+                center:
+                space-between:左右对齐，中间平均分布
+                space-around:平均间距，将多余空间平均分给每个子元素左右
+                */
+            justify-content: space-around;
+            /* align-items 元素在侧轴方向上的对齐方式
+                stretch 在侧轴方向拉伸填充 默认值
+                baseline 基线，英文字符，
+            */
+            align-items: center;
+        }
+
+        .box>div {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* 
+        为单个子元素侧轴对齐
+        align-self
+         */
+        .first {
+            background-color: red;
+            font-size: 55px;
+            align-self: flex-end;
+        }
+
+        .second {
+            background-color: green;
+        }
+
+        .third {
+            background-color: orange;
+        }
+
+        .fouth {
+            background-color: pink;
+        }
+        .fifth{
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="first">first</div>
+        <div class="second">second</div>
+        <div class="third">third</div>
+        
+
+    </div>
+</body>
+
+</html>
