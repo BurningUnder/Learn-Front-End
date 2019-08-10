@@ -8,13 +8,26 @@
 -webkit-column-count:3; /* Safari and Chrome */
 column-count:3;
 
+/* 列间隙大小 */
 -moz-column-gap:40px; /* Firefox */
 -webkit-column-gap:40px; /* Safari and Chrome */
 column-gap:40px;
 
+/* 列间隙样式 */
 -moz-column-rule:4px outset #ff0000; /* Firefox */
 -webkit-column-rule:4px outset #ff0000; /* Safari and Chrome */
 column-rule:4px outset #ff0000;
+
+/* 
+    column-width 
+    列宽度取大优先，
+    1.如果人为设置大，但会自动填充屏幕
+    2.设置小则使用默认计算
+    */
+
+/* 
+    column-span可以设置元素的跨列，n~n列，all跨所有列
+     */
 }
 </style>
 </head>
